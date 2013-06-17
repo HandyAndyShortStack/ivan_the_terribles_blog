@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   caches_page :index
 
   def index
+    Rack::MiniProfiler.authorize_request
+
     @posts = Post.all
 
     respond_to do |format|
@@ -16,6 +18,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    Rack::MiniProfiler.authorize_request
     @post = Post.find(params[:id])
 
     respond_to do |format|
