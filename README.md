@@ -63,3 +63,8 @@ Miniprofiler is still not showing up on the posts#index page.  I am fairly certa
 
 Expiring the cached copy will make miniprofiler run on every cache miss.  I will have to use new relic to get cache hit metrics.
 
+## Second Step: Getting Rid of Comment Text
+
+While maintaining reasonable usability, I believe that I can replace comment text with a link to the comments, displaying the number of comments.  I do not need miniprofiler to tell me that this is a major bottleneck.
+
+
