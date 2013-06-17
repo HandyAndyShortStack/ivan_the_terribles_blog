@@ -21,13 +21,14 @@ end
 
 gem 'jquery-rails'
 
+gem 'faker'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'hirb'
-  gem 'faker'
 end
 
 group :development do

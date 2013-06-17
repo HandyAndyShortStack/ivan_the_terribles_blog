@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  
+  caches_page :index
+
   def index
     @posts = Post.all
 
