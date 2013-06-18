@@ -122,7 +122,7 @@ Now the database gets hit a hundred times, but it didn't feel sporting to leave 
 
 ## Giving Up
 
-I am now too burnt out to keep optimizing this app.  I will now switch gears and focus on making it pretty to satisfy requirements for the Views assignment.
+I am now too burnt out to keep optimizing this app.  Time to switch gears and focus on making it pretty to satisfy requirements for the Views assignment.
 
 # Views Improvement
 
@@ -135,3 +135,9 @@ This was super easy.  I just added kaminari to the Gemfile and called page on my
 ## Continuous Scrolling!!!
 
 I created an ajax controller for this and moved the page views into partials
+
+## Bootstrap FTW
+
+That little miniprofiler thing is an eyesore. I got rid of it.  Now to bootstrap up this thang.
+
+Oh god I am not a designer!!  This is going up to heroku as-is.
