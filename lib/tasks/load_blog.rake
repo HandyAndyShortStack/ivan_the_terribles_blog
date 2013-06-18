@@ -6,7 +6,7 @@ namespace :load_blog do
         title: Faker::Company.catch_phrase,
         body: Faker::Lorem.paragraphs.join("\n")
       )
-      100.times do
+      49.times do
         c = p.comments.build( body: Faker::Lorem.paragraphs.join("\n"))
         r = c.replies.build(  body: Faker::Lorem.paragraphs.join("\n"))
         p.save!
