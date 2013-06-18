@@ -6,12 +6,12 @@ $(function(){
   }, 250);
 }); 
 
-var page_number = 1;
+var page_number = 2;
 function loadNextPage() {
-  page_number += 1;
   $.ajax({
     url: '/ajax/posts?page=' + page_number,
     success: function(response) {
+      page_number += 1;
       $('.blog').append(response);
     }
   })
