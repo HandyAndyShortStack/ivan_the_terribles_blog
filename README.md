@@ -126,4 +126,12 @@ I am now too burnt out to keep optimizing this app.  I will now switch gears and
 
 # Views Improvement
 
-Well, now I need to take an existing project and make it pretty.  
+Well, now I need to take an existing project and make it pretty.  I will use three methods covered in railscasts.
+
+## Pagination with Kaminari
+
+This was super easy.  I just added kaminari to the Gemfile and called page on my Post object in the posts_controller.  I could use paginate tags for navigation, but...
+
+## Continuous Scrolling!!!
+
+I created an ajax controller for this and moved the page views into partials
