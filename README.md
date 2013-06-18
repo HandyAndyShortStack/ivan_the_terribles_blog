@@ -67,4 +67,63 @@ Expiring the cached copy will make miniprofiler run on every cache miss.  I will
 
 While maintaining reasonable usability, I believe that I can replace comment text with a link to the comments, displaying the number of comments.  I do not need miniprofiler to tell me that this is a major bottleneck.
 
+### Solution:
 
+This will take creating a view for the comments of a post, and replacing comments in the post index with links to their post's comments index page.
+
+#### Generating a Route:
+
+in config/routes.rb:
+```ruby
+resources :posts do
+  resources :comments
+end
+```
+
+#### Making The Route Work:
+
+in app/controllers/comments_controller.rb:
+```ruby
+def index
+  if params[:post_id]
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+  else
+    @comments = Comment.all
+  end
+end
+```
+
+#### Replacing Comment Literals with Links:
+
+In app/views/posts/index.html.erb
+
+this:
+```erb
+<div class="comment">
+  <% post.comments.each do |c| %>
+    <p><%= c.body %></p>
+    <div class="reply">
+      <% c.replies.each do |r| %>
+        <p><%= r.body %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+```
+becomes this:
+```erb
+<div class="comment">
+  <%= link_to "#{post.comments.count} comments", post_comments_path(post) %>
+</div>
+```
+
+Now the database gets hit a hundred times, but it didn't feel sporting to leave out the number of comments.
+
+## Giving Up
+
+I am now too burnt out to keep optimizing this app.  I will now switch gears and focus on making it pretty to satisfy requirements for the Views assignment.
+
+# Views Improvement
+
+Well, now I need to take an existing project and make it pretty.  
