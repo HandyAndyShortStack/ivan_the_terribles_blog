@@ -22,8 +22,10 @@ end
 gem 'jquery-rails'
 
 gem 'faker'
-gem 'rack-mini-profiler'
 gem 'kaminari'
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'rspec-rails'

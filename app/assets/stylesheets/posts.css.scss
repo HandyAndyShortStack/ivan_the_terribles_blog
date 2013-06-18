@@ -1,3 +1,19 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title {
+  text-align: center;
+}
+
+.container {
+  box-shadow: 0 0 10px #000000;
+  padding: 20px;
+}
+
+.post-title a {
+  color: black;
+  &:hover {
+    color: green;
+  }
+}
