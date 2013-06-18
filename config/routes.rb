@@ -9,5 +9,7 @@ IvanTheTerriblesBlog::Application.routes.draw do
 
   root :to => 'posts#index'
 
+  match "/ajax/posts" => "ajax#posts"
+
 end
 

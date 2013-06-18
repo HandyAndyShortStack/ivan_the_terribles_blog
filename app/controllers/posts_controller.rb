@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     Rack::MiniProfiler.authorize_request
 
-    @posts = Post.all
+    @posts = Post.page(1).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
