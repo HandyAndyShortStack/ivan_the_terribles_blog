@@ -141,3 +141,7 @@ I created an ajax controller for this and moved the page views into partials
 That little miniprofiler thing is an eyesore. I got rid of it.  Now to bootstrap up this thang.
 
 Oh god I am not a designer!!  This is going up to heroku as-is.
+
+## Screenshot
+
+![screenshot](screenshot.png)
